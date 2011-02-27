@@ -18,7 +18,7 @@ $handle = sub {
 			"${EM}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
-			' ('.
+			' (http://twitter.com/'.
 			"${EM}".
 			&descape($ref->{'user'}->{'screen_name'}).
 			"$OFF".
@@ -56,7 +56,7 @@ $dmhandle = sub {
 			"${EM}".
 			&descape($ref->{'sender'}->{'name'}).
 			"$OFF".
-			' ('.
+			' (http://twitter.com/'.
 			"${EM}".
 			&descape($ref->{'sender'}->{'screen_name'}).
 			"$OFF".
