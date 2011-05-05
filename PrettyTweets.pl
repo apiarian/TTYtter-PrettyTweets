@@ -28,15 +28,18 @@ $handle = sub {
 		$names = "${EM}".&descape($ref->{'user'}->{'screen_name'})."$OFF ";
 	}
 	my $text = "${color}".&descape($ref->{'text'})."$OFF";
+	my $bar = &descape("┃ ");
+	$text =~ s/\\n/\n$bar/g;
 
 	print $streamout (
+		&descape("┏━━ "),
+		$names,
 		"${color}".$menuselect."$OFF",
 		$timestamp,
-		$names,
-		"\n",
-		(' ' x length $menuselect),
+		"\n".&descape("┃ "),
+		#(' ' x length $menuselect),
 		$text,
-		"\n",
+		"\n".&descape("┗━━")."\n",
 	);
 	return 1;
 };
@@ -66,15 +69,18 @@ $dmhandle = sub {
 		$names = "${EM}".&descape($ref->{'sender'}->{'screen_name'})."$OFF ";
 	}
 	my $text = "${color}".&descape($ref->{'text'})."$OFF";
+	my $bar = &descape("┃ ");
+	$text =~ s/\\n/\n$bar/g;
 
 	print $streamout (
+		&descape("┏━━ "),
+		$names,
 		"${color}".$menuselect."$OFF",
 		$timestamp,
-		$names,
-		"\n",
-		(' ' x length $menuselect),
+		"\n".&descape("┃ "),
+		#(' ' x length $menuselect),
 		$text,
-		"\n",
+		"\n".&descape("┗━━")."\n",
 	);
 	return 1;
 };

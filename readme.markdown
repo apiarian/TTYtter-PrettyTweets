@@ -9,6 +9,15 @@ PrettyTweets.pl
 The extension.  Simply load it adding -exts="/path/to/PrettyTweets.pl" to your
 ttytter invocation.
 
+*Please note*: your terminal needs to support unicode and be at least 145
+characters wide
+
+Known Bugs
+----------
+
+This extension inexplicably breaks growl support (possibly other notifications
+as well)
+
 NOTE
 ----
 
